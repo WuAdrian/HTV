@@ -34,14 +34,14 @@ jobs:
           pip install lxml ujson pyquery requests jsonpath cachetools pycryptodome beautifulsoup4
 
       # 修改 `build.gradle` 文件
-      - name: Modify pyramid——build.gradle
-        run: |
-          # 替换Windows路径为系统Python路径
-          # sed -i "s|buildPython(\"D:/Programs/Python/Python38/python.exe\")|buildPython(\"/usr/bin/python3\")|g" pyramid/build.gradle
-          sed -i '/buildPython("D:\/Programs\/Python\/Python38\/python.exe")/d' pyramid/build.gradle
+      #- name: Modify pyramid——build.gradle
+      #  run: |
+      #    # 替换Windows路径为系统Python路径
+      #    # sed -i "s|buildPython(\"D:/Programs/Python/Python38/python.exe\")|buildPython(\"/usr/bin/python3\")|g" pyramid/build.gradle
+      #    sed -i '/buildPython("D:\/Programs\/Python\/Python38\/python.exe")/d' pyramid/build.gradle
 
-      - name: Setup Python local.properties
-        run: echo "" > local.properties 
+      #- name: Setup Python local.properties
+      # run: echo "" > local.properties 
 
 
       - name: Build With Gradle
